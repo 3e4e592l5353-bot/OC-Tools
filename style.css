@@ -17,8 +17,8 @@ body {
 /* ===== 侧边导航栏 ===== */
 #sidebar {
     width: 220px;
-    background: #14141f;
-    border-right: 1px solid #2a2a3a;
+    background: #e5e5e8;
+    border-right: 1px solid #f0f0f3;
     padding: 20px 12px;
     display: flex;
     flex-direction: column;
@@ -30,16 +30,16 @@ body {
     font-size: 20px;
     font-weight: 700;
     padding: 12px 16px;
-    color: #a78bfa;
+    color: #eaeaec;
     letter-spacing: 1px;
-    border-bottom: 1px solid #2a2a3a;
+    border-bottom: 1px solid #eaeaec;
     margin-bottom: 16px;
 }
 
 .nav-btn {
     background: transparent;
     border: none;
-    color: #a1a1aa;
+    color: #f5f5f7;
     padding: 12px 16px;
     border-radius: 10px;
     font-size: 15px;
