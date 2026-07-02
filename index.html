@@ -1,9 +1,95 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>This is a title</title>
-  </head>
-  <body>
-    <p>Hello world!</p>
-  </body>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的OC宇宙</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 图标库，方便你用图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- 侧边导航栏（六个按钮都在这里） -->
+    <nav id="sidebar">
+        <div class="nav-brand">🧙 OC宇宙</div>
+        <button class="nav-btn active" data-page="home"><i class="fas fa-home"></i> 主页</button>
+        <button class="nav-btn" data-page="oc"><i class="fas fa-users"></i> OC</button>
+        <button class="nav-btn" data-page="timeline"><i class="fas fa-clock"></i> 时间线</button>
+        <button class="nav-btn" data-page="relation"><i class="fas fa-project-diagram"></i> 关系</button>
+        <button class="nav-btn" data-page="item"><i class="fas fa-cube"></i> 物品</button>
+        <button class="nav-btn" data-page="entity"><i class="fas fa-landmark"></i> 实体</button>
+    </nav>
+
+    <!-- 主内容区：六个页面 -->
+    <main id="main-content">
+        <!-- 页面1: 主页 -->
+        <section id="page-home" class="page active">
+            <h1>🏠 欢迎来到你的OC宇宙</h1>
+            <p>在这里，你创造的世界由你主宰。</p>
+            <div id="stats-grid">
+                <div class="stat-card"><span id="stat-oc">0</span> 个OC</div>
+                <div class="stat-card"><span id="stat-timeline">0</span> 条时间线</div>
+                <div class="stat-card"><span id="stat-relation">0</span> 条关系</div>
+                <div class="stat-card"><span id="stat-item">0</span> 件物品</div>
+            </div>
+        </section>
+
+        <!-- 页面2: OC列表 -->
+        <section id="page-oc" class="page">
+            <div class="page-header">
+                <h2><i class="fas fa-users"></i> OC管理</h2>
+                <button id="addOCBtn" class="btn-primary"><i class="fas fa-plus"></i> 添加OC</button>
+            </div>
+            <div id="oc-list" class="card-grid"></div>
+        </section>
+
+        <!-- 页面3: 时间线 -->
+        <section id="page-timeline" class="page">
+            <div class="page-header">
+                <h2><i class="fas fa-clock"></i> 时间线管理</h2>
+                <button id="addTimelineBtn" class="btn-primary"><i class="fas fa-plus"></i> 添加时间线</button>
+            </div>
+            <div id="timeline-list" class="card-grid"></div>
+        </section>
+
+        <!-- 页面4: 关系 -->
+        <section id="page-relation" class="page">
+            <div class="page-header">
+                <h2><i class="fas fa-project-diagram"></i> 关系管理</h2>
+                <button id="addRelationBtn" class="btn-primary"><i class="fas fa-plus"></i> 添加关系</button>
+            </div>
+            <div id="relation-list" class="card-grid"></div>
+        </section>
+
+        <!-- 页面5: 物品 -->
+        <section id="page-item" class="page">
+            <div class="page-header">
+                <h2><i class="fas fa-cube"></i> 物品管理</h2>
+                <button id="addItemBtn" class="btn-primary"><i class="fas fa-plus"></i> 添加物品</button>
+            </div>
+            <div id="item-list" class="card-grid"></div>
+        </section>
+
+        <!-- 页面6: 实体 -->
+        <section id="page-entity" class="page">
+            <div class="page-header">
+                <h2><i class="fas fa-landmark"></i> 实体管理</h2>
+                <button id="addEntityBtn" class="btn-primary"><i class="fas fa-plus"></i> 添加实体</button>
+            </div>
+            <div id="entity-list" class="card-grid"></div>
+        </section>
+    </main>
+
+    <!-- 导入/导出工具栏 -->
+    <div id="toolbar">
+        <button id="exportBtn" class="btn-secondary"><i class="fas fa-download"></i> 导出JSON</button>
+        <button id="importBtn" class="btn-secondary"><i class="fas fa-upload"></i> 导入JSON</button>
+        <span id="auto-save-status" class="save-status">✅ 已自动保存</span>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="storage.js"></script>
+    <script src="main.js"></script>
+</body>
 </html>
